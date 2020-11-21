@@ -1,0 +1,143 @@
+<!DOCTYPE HTML>
+
+<head>
+
+  <meta charset="UTF-8" />
+  <script type="text/javascript" src="js/manteniment_alumnes.js"> </script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Manteniment estudiants </title>
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <meta name="author" content="Sergi Juanati">
+
+</head>
+
+<!--body onload="obtenirProfessors()"-->
+<body>
+
+  <div class="global_menu_border">
+
+    <header> <p class="global_menu_header"> PLA PQTM CIFO 2019 </p> </header>
+
+    <hr class="no_top_margin">
+
+    <div class="flex_menu">
+
+      <div class="local_menu_border width800px">
+
+        <!--form id="formulari"-->
+
+          <p class="local_menu_header"> Manteniment estudiants </p>
+
+          <div class="flex_menu padding_top_10px padding_bottom_20px">
+
+            <!-- Llistat de professors i grups -->
+
+            <section class="width300px">
+
+              <p> Formador:
+                <select id="profesCombo" onchange="obtenirAlumnes('1','')">
+                </select>
+              </p>
+
+              <div style="height: 35vh; overflow: auto">
+                <table id="estudiantsTaula" class='left'>
+                </table>
+                <br>
+              </div>
+
+              <div id="paginacio">
+              </div>
+
+            </section>
+
+            <!-- Dades personals -->
+
+            <form id="formulari">
+
+            <section class="local_menu_border width300px center">
+
+                <p class="center bold"> Dades personals </p>
+
+                  <div class="flex_input">
+                    <p class="inline_block width100px right"> Nom: </p>
+                    <input type="text" id="nom" class="width150px">
+                  </div>
+
+                  <div class="flex_input">
+                    <p class="inline_block width100px right"> Usuari: </p>
+                    <input type="text" id="usuari" class="width150px">
+                  </div>
+
+                  <div class="flex_input">
+                    <p class="inline_block width100px right"> Email: </p>
+                    <input type="email" id="email" class="width150px">
+                  </div>
+
+                  <div class="flex_input">
+                    <p class="inline_block width100px right"> Formador: </p>
+                    <select id="profesComboDades" class="width150px" onchange="consultaGrupsProfessor()">
+                    </select>
+                  </div>
+
+                  <div class="flex_input">
+                    <p class="inline_block width100px right"> Afegir a: </p>
+                      <select id="grupsComboDades" class="width150px">
+                      </select>
+                  </div>
+
+                  <div class="flex_input padding_top_5px">
+                    <p class="inline_block width100px right" id="participaGrupsParagraph"> Participa grups: </p>
+                    <textarea rows="3" cols="27" id="participaGrups">  </textarea>
+                  </div>
+
+                  <hr>
+
+                  <div>
+                    <button id="neteja" type="button" class="boto boto_modificar width125px">
+                    Netejar </button>
+                  </div> <br>
+
+              </section>
+
+              </form>
+
+            </div>
+
+
+            <!-- Botons -->
+
+        <footer class="flex_menu padding_bottom_20px">
+          <div>
+            <button id="alta" type="button" class="boto boto_ok width150px">
+            <i class="material-icons md-16"> add </i> Afegir estudiant </button>
+          </div>
+
+          <div>
+            <button id="modificar" type="button" class="boto boto_modificar width175px">
+            <i class="material-icons md-16"> check </i> Modificar estudiant </button>
+          </div>
+
+          <div>
+            <button id="baixa" type="button" class="boto boto_eliminar width150px">
+            <i class="material-icons md-16"> close </i> Baixa estudiant </button>
+          </div>
+
+          <div>
+            <button id="enrere" type="button" class="boto boto_cancel width100px" onclick="history.back(-1)">
+            <i class="material-icons md-16"> chevron_left </i> Enrere </button>
+          </div>
+
+          <input type='hidden' id='idprofessor' >
+
+        </footer>
+
+      <!--/form-->
+
+      </div>
+
+    </div>
+
+  </div>
+
+</body>

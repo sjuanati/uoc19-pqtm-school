@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+
+<head>
+
+  <meta charset="UTF-8" />
+  <script type="text/javascript" src="js/manteniment_grups.js"> </script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Manteniment formadors </title>
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <meta name="author" content="Sergi Juanati"
+
+</head>
+
+<!--body onload="obtenirProfessors()"-->
+<body>
+
+  <div class="global_menu_border">
+
+    <header> <p class="global_menu_header"> PLA PQTM CIFO 2019 </p> </header>
+
+    <hr class="no_top_margin">
+
+    <div class="flex_menu">
+
+      <div class="local_menu_border width800px">
+
+        <form id="formulari">
+
+          <p class="local_menu_header"> Manteniment grups </p>
+
+          <div class="flex_menu padding_top_10px padding_bottom_20px">
+
+            <!-- Llistat de professors i grups -->
+
+            <section class="width300px">
+
+              <p> Formador:
+                <select id="profesCombo">
+                </select>
+              </p>
+
+               <div style="height: 35vh; overflow: auto">
+                 <table id="profesTaula" class='left'>
+                 </table>
+                 <br>
+               </div>
+
+            </section>
+
+            <!-- Descripció grup-->
+
+            <section class="local_menu_border width300px center">
+
+                <p class="center bold"> Descripció grup </p>
+
+                  <div class="flex_input">
+                    <p class="inline_block width100px right"> Nom grup: </p>
+                    <input type="text" id="nom">
+                  </div>
+
+                  <div class="flex_input">
+                    <p class="inline_block width100px right"> Descripció: </p>
+                    <textarea rows="4" cols="18" id="descripcio"> jarlll </textarea>
+                  </div>
+
+                  <div class="flex_input">
+                    <p class="inline_block width100px right"> Formador: </p>
+                    <input type="text" id="formador" class="camp_deshabilitat" disabled>
+                  </div>
+
+                  <hr>
+
+                  <div>
+                    <button id="participants" type="button" class="boto boto_modificar width125px">
+                    Participants </button>
+                  </div> <br>
+
+                  <div>
+                    <textarea rows="7" cols="45" id="llistaParticipants">  </textarea>
+                  </div> <br>
+
+
+              </section>
+
+            </div>
+
+
+            <!-- Botons -->
+
+        <footer class="flex_menu padding_bottom_20px">
+          <div>
+            <button id="alta" type="button" class="boto boto_ok width125px">
+            <i class="material-icons md-16"> add </i> Afegir grup </button>
+          </div>
+
+          <div>
+            <button id="modificar" type="button" class="boto boto_modificar width125px">
+            <i class="material-icons md-16"> check </i> Modificar grup </button>
+          </div>
+
+          <div>
+            <button id="baixa" type="button" class="boto boto_eliminar width125px">
+            <i class="material-icons md-16"> close </i> Baixa grup </button>
+          </div>
+
+          <div>
+            <button id="enrere" type="button" class="boto boto_cancel width100px" onclick="history.back(-1)">
+            <i class="material-icons md-16"> chevron_left </i> Enrere </button>
+          </div>
+
+          <input type='hidden' id='idprofessor' >
+
+        </footer>
+
+      </form>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</body>

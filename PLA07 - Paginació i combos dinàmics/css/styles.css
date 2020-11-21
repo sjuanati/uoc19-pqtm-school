@@ -1,0 +1,189 @@
+
+hr {
+  border-color: #FFD662; /* Aspen Gold */
+}
+
+a.menu_item_layout: hover {
+  cursor: pointer;
+}
+
+/* Layouts */
+
+.global_menu_border {
+  border-radius: 25px;
+  border: 2px
+  solid #98DDDE; /* Limpet Shell */
+  padding-bottom: 20px;
+  background-color: #AF9483; /* Warm Taupe */
+  max-width: 900px;
+  overflow: auto;
+  font-family: sans-serif;
+  color: white;
+  font-size: 18px;
+}
+
+.global_menu_header {
+  text-align: center;
+  margin:0;
+  height:40px;
+  line-height: 40px;
+  border-radius: 25px 25px 0 0;
+  background-color: #2E4A62; /* Sailor Blue */
+}
+
+.local_menu_border {
+  border-radius: 25px;
+  border: 2px
+  solid #98DDDE; /* Limpet Shell */
+  background-color: #578CA9; /* Niagara */
+}
+
+.local_menu_header {
+  text-align: center;
+  margin: 0;
+  color: white;
+  height:40px;
+  line-height: 40px;
+  border-radius: 25px 25px 0 0;
+  background-color: #577284 /* Bluestone */
+}
+
+.flex_menu {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction:row;
+  justify-content: space-around;
+}
+
+.flex_item {
+  display: flex;
+  flex-direction:row;
+  justify-content:space-between;
+  align-items: center;
+  line-height: 0;
+  padding: 0px 10px 0px 10px;
+}
+
+.flex_column {
+  display: flex;
+  flex-direction:column;
+}
+
+.flex_item a {
+  text-decoration-line: none;
+}
+
+.flex_input {
+  display: flex;
+  flex-direction:row;
+  justify-content:space-around;
+  align-items: center;
+  line-height: 0px;
+  padding: 0px 10px 0px 10px;
+}
+
+.menu_input_left_layout {
+  width: 40%;
+  padding: 3px;
+  text-align: right;
+}
+
+.menu_item50 {
+  width: 50%;
+  padding: 3px;
+  text-align: right;
+}
+
+/* Llistat dinàmic de professors en 'manteniment_professors.html' */
+
+#dadesProfes td, #dadesProfes th, #dadesEscoles td, #dadesEscoles th {
+  padding: 3px;
+  text-align: left;
+}
+
+#dadesProfes th, #dadesEscoles th {
+  border-bottom: 1px solid;
+  color: #EAE6DA /* Tofu */
+}
+
+#dadesProfes td, #paginacio span {
+  cursor: pointer;
+}
+
+/* marges */
+
+.no_top_margin { margin-top: 0; }
+.no_line_height { line-height: 0px; }
+
+.width100px { width: 100px; }
+.width125px { width: 125px; }
+.width150px { width: 150px; }
+.width300px { width: 300px; }
+.width600px { width: 600px; }
+
+.height22px { height: 22px; }
+
+.center { text-align: center; }
+
+/* espais */
+
+.padding_top_10px { padding-top: 10px; }
+.padding_bottom_20px { padding-bottom: 20px; }
+
+/* botons */
+
+.boto {
+  height: 30px;
+  border: 1px solid #FFD662; /* Aspen Gold */
+  border-radius: 4px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+
+.boto:hover {
+  cursor: pointer;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.boto_ok {
+  background-color: #4CAF50;
+}
+
+.boto_eliminar {
+  background-color: #FF6F61 /* Living Coral */
+}
+
+.boto_modificar {
+  background-color: #797B3A /* Guacamole */
+}
+
+.boto_cancel {
+  background-color: transparent;
+}
+
+
+/* icones */
+
+.material-icons.md-16 { font-size: 16px; }
+
+i { vertical-align: middle; }
+
+/* responsive text */
+
+@media screen and (min-width: 300px) {
+  p, button, tr {
+      font-family: sans-serif;
+      color: white;
+      font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 299px) and (min-width: 50px) {
+  p, button, tr {
+      font-family: sans-serif;
+      color: white;
+      font-size: calc(10px + .5vw);
+    }
+}
+
+.bold { font-weight: bold}

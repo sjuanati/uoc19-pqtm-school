@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+
+<head>
+
+  <meta charset="UTF-8" />
+  <script type="text/javascript" src="js/manteniment_professors.js"> </script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Manteniment formadors </title>
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <meta name="author" content="Sergi Juanati"
+
+</head>
+
+<!--body onload="obtenirProfessors()"-->
+<body>
+
+  <div class="global_menu_border">
+
+    <header> <p class="global_menu_header"> PLA PQTM CIFO 2019 </p> </header>
+
+    <hr class="no_top_margin">
+
+    <div class="flex_menu">
+
+      <div class="local_menu_border width600px">
+
+        <p class="local_menu_header"> Manteniment professors </p>
+
+        <div class="flex_menu padding_top_10px padding_bottom_20px">
+
+          <!-- Llistat de professors -->
+
+          <section>
+
+            <p class="center bold"> Professors </p>
+            <!-- *** Style temporal fins que no afegim la paginació ***-->
+             <div style="height: 35vh; overflow: auto">
+               <table id="dadesProfes">
+                 <tr>
+                   <th> ID  </th>
+                   <th> Professor </th>
+                   <th> Tipus </th>
+                 </tr>
+               </table>
+               <br>
+             </div>
+
+          </section>
+
+          <!-- Dades personals-->
+
+          <section class="local_menu_border" style="height: 230px;">
+
+              <!--form-->
+              <p class="center bold"> Dades personals </p>
+
+              <div class="flex_input">
+                <div class="menu_input_left_layout"> <p> Nom: </p> </div>
+                <div> <input type="text" id="nom"> </div>
+              </div>
+
+              <div class="flex_input">
+                <div class="menu_input_left_layout"> <p> Usuari: </p> </div>
+                <div> <input type="text" id="usuari"></div>
+              </div>
+
+              <div class="flex_input">
+                <div class="menu_input_left_layout"> <p> Email: </p> </div>
+                <div> <input type="email" id="email"> </div>
+              </div>
+
+              <div class="flex_input">
+                <div class="menu_item50"> <p> Tipus usuari: </p> </div>
+                <div class="menu_item50">
+                  <select>
+                    <option value="TC"> Formador </option>
+                    <option value="AD"> Administrador </option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="flex_input">
+                <div class="menu_item50"> <p> Escola: </p> </div>
+                <div class="menu_item50">
+                  <select>
+                    <option value="nil"> Defecte </option>
+                  </select>
+                </div>
+              </div>
+
+              <br>
+
+            </section>
+
+        </div>
+
+
+            <!-- Botons -->
+
+        <footer class="flex_menu padding_bottom_20px">
+          <div>
+            <button id="nou" type="button" class="boto boto_ok width125px">
+            <i class="material-icons md-16">check</i> Nou formador </button>
+          </div>
+          <div>
+            <button id="enrere" type="button" class="boto boto_cancel width100px" onclick="history.back(-1)">
+            <i class="material-icons md-16">chevron_left</i> Enrere </button>
+          </div>
+        </footer>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</body>

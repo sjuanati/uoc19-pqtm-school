@@ -1,0 +1,257 @@
+
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-color:#E4E4E4;
+    background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    font-family: system-ui, -apple-system, -apple-system-font, 'Segoe UI', 'Roboto', sans-serif;
+    font-size:12px;
+    height:100vh;
+    margin:0px;
+    padding:0px;
+    /* Padding to avoid the "unsafe" areas behind notches in the screen */
+    padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-right, 0px);
+    text-transform:uppercase;
+    width:100%;
+    max-width: 1200px;              /* Amplada màxima 1200px */
+}
+
+/* Portrait layout (default) */
+.app {
+    background:url(../img/logo.png) no-repeat center top; /* 170px x 200px */
+    position:absolute;             /* position in the center of the screen */
+    left:50%;
+    top:50%;
+    height:50px;                   /* text area height */
+    width:225px;                   /* text area width */
+    text-align:center;
+    padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
+    margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
+                                   /* offset horizontal: half of text area width */
+}
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    .app {
+        background-position:left center;
+        padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
+        margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
+                                      /* offset horizontal: half of image width and text area width */
+    }
+}
+
+/* botons */
+.boto {
+    height: 30px;
+    border: 1px solid #FFD662; /* Aspen Gold */
+    border-radius: 10px;
+    cursor: pointer;
+    /*transition-duration: 0.4s;*/
+    margin-left: 20px;
+  }
+
+/* icones */
+.material-icons.md-16 { font-size: 16px; }
+
+i { vertical-align: middle; }
+
+h1 {
+    font-size:24px;
+    font-weight:normal;
+    margin:0px;
+    overflow:visible;
+    padding:0px;
+    text-align:center;
+}
+
+h2 {
+    margin-top: 100px;
+    color: royalblue;
+}
+
+.navbar_container_small {
+    display: none;
+    justify-content: flex-start;
+    height: 70px;
+    background-color: rgba(46, 74, 98, 1);
+}
+
+.navbar_container_small img {
+
+    height: 35px;
+    width: 35px;
+    padding: 18px 5px;
+}
+
+.navbar_container_normal {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 70px;
+    background-color: rgba(46, 74, 98, 1);
+}
+
+.navbar_item {
+    padding: 0 15px;
+    color: white;
+    text-decoration: none;
+}
+
+.section_container {
+    display: flex;
+    flex-direction: column;
+}
+
+.article_container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.article_item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 32.5%;
+    margin-right: 0.5%;
+}
+
+.image_container {
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    width: 100%;
+}
+
+.text_container {
+    text-align: center;
+    width: 100%;
+}
+
+.navbar_item:hover {
+    color: tan;
+    transition: background-color 500ms linear;
+}
+
+/* Ajustar el tamany de les imatges amb el de cada article*/
+.article_container img {
+    max-width: 100%;
+    min-width: 100%;
+}
+
+
+/* VISTES AFEGIR I DETALL */
+
+.detail_container {
+    display: flex;
+    flex-direction: column;
+}
+
+.detail_item_container, .buttons_container {
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.width_150px { width: 150px; }
+.padding_15px { padding: 15px; }
+.fontsize_16px { font-size: 16px;}
+.fontbold { font-weight: bold;}
+.marginbottom_20px { margin-bottom: 20px;}
+.hidden { display: none; }
+
+
+/* Ajustar el tamany de les imatges amb el de cada article*/
+.detail_container img {
+    max-width: 100%;
+    min-width: 100%;
+}
+
+.mapa {
+    width: 300px; 
+    height: 300px; 
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/* Media query: Resolució horitzontal menor o igual que 820px [TABLET] */
+@media screen and (max-width: 820px) {
+
+    .article_item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 49%;
+    }
+}
+
+
+
+/* Media query: Resolució horitzontal menor o igual que 550px [SMARTPHONE] */
+@media screen and (max-width: 550px) {
+
+    .navbar_container_small {
+        display: flex;
+    }
+
+    .navbar_container_normal {
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        top: 70px;
+        left: -150px;
+        text-align: left; 
+        justify-content: left;
+        height: 120px;
+    }
+
+    .navbar_container_normal > .navbar_item {
+        width: 85px;
+        padding: 25px 0 0 15px;
+    }
+
+    .article_item {
+        display: flex;
+        flex-direction: row;         
+        justify-content: center;
+        width: 100%;
+        align-items: center;
+    }
+
+    .image_container {
+        position: relative;
+        text-align: center;
+        overflow: hidden;
+        width: 25%;
+        /*margin-top: 20px;*/
+        margin: 10px 0 0 5px;
+    }
+
+    .text_container {
+        text-align: left;
+        width: 75%;
+        margin-left: 10px;
+    }
+
+    .detail_item_container > .text_container {
+        text-align: center;
+    }
+
+    .detail_item_container > .image_container {
+        width: 75%;
+    }
+
+    .detail_item_container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+
+}

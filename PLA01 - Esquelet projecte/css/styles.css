@@ -1,0 +1,102 @@
+/* global */
+
+/*
+body {
+    margin: 0;
+    padding: 0;
+}
+*/
+
+hr {
+  border-color: #FFD662; /* Aspen Gold */
+}
+
+/* Layouts */
+
+.global_rounded_corner {
+  border-radius: 25px;
+  border: 2px
+  solid #98DDDE; /* Limpet Shell */
+  padding-bottom: 20px;
+  background-color: #AF9483; /* Warm Taupe */
+  max-width: 900px;
+}
+
+.global_header_layout {
+  text-align: center;
+  margin:0;
+  height:40px;
+  line-height: 40px;
+  border-radius: 25px 25px 0 0;
+  background-color: #2E4A62; /* Sailor Blue */
+}
+
+.menu_layout {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction:row;
+  justify-content: space-around;
+}
+
+.menu_rounded_corner {
+  border-radius: 25px;
+  border: 2px
+  solid #98DDDE; /* Limpet Shell */
+  width: 300px;
+  height: 400px;
+  background-color: #578CA9; /* Niagara */
+}
+
+.menu_header_layout {
+  text-align: center;
+  margin: 0;
+  color: white;
+  height:40px;
+  line-height: 40px;
+  border-radius: 25px 25px 0 0;
+  background-color: #577284 /* Bluestone */
+}
+
+.menu_item_layout {
+  display: flex;
+  flex-direction:row;
+  justify-content:space-between;
+  line-height: 0;
+  padding: 0px 10px 0px 10px;
+}
+
+/* margins */
+
+.no_top_margin {
+  margin-top: 0;
+}
+
+/* hovers */
+
+div.menu_item_layout:hover {
+  background: #615550; /* Brown Granite */
+  cursor: pointer;
+}
+
+/* responsive text */
+
+@media screen and (min-width: 300px) {
+  p {
+      font-family: sans-serif;
+      color: white;
+      font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 299px) and (min-width: 50px) {
+  p {
+      color: white;
+      font-size: calc(10px + .5vw);
+    }
+}
+
+.font18_white {
+  font-family: sans-serif;
+  color: white;
+  font-size: 18px;
+}

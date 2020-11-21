@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+
+<head>
+
+  <meta charset="UTF-8" />
+  <script type="text/javascript" src="js/manteniment_escoles.js"> </script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Manteniment escoles </title>
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <meta name="author" content="Sergi Juanati">
+
+</head>
+
+<!--body onload="obtenirProfessors()"-->
+<body>
+
+  <div class="global_menu_border">
+
+    <header> <p class="global_menu_header"> PLA PQTM CIFO 2019 </p> </header>
+
+    <hr class="no_top_margin">
+
+    <div class="flex_menu">
+
+      <div class="local_menu_border width600px">
+
+        <form id="formulari">
+
+        <p class="local_menu_header"> Manteniment escoles </p>
+
+        <div class="flex_menu padding_top_10px padding_bottom_20px">
+
+          <!-- Llistat d'escoles -->
+
+          <section>
+
+             <div style="height: 35vh; overflow: auto">
+
+               <input type='text' id='novaEscola' class='height22px width150px'>
+               <button id='alta' type='button' class='boto boto_ok width100px'>
+                    <i class='material-icons md-16'>add</i> Alta </button>
+
+
+               <table id="dadesEscoles">
+               </table>
+
+               <br>
+             </div>
+
+          </section>
+
+        </div>
+
+
+            <!-- Botons -->
+
+        <footer class="flex_menu padding_bottom_20px">
+
+          <div>
+            <button id="enrere" type="button" class="boto boto_cancel width100px" onclick="history.back(-1)">
+            <i class="material-icons md-16">chevron_left</i> Enrere </button>
+          </div>
+
+          <input type='hidden' id='idescola' >
+
+        </footer>
+
+      </form>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</body>

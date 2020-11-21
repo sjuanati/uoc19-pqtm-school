@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        
+        <script src="http://maps.google.com/maps/api/js?key=****************************************"></script>
+        <script type="text/javascript" src="js/global.js"> </script>
+        <script type="text/javascript" src="js/detall_lloc.js"> </script>
+
+        <link rel="stylesheet" type="text/css" href="css/global.css">
+
+        <title> Detall Lloc </title>
+        <meta name="author" content="Sergi Juanati">
+    </head>
+
+    <body>
+
+        <nav class="navbar_container_small"> 
+            <div class="navbar_item"> <img src="img/list-menu.png" id="hamburguer_navbar"> </div>
+        </nav>
+
+        <nav class="navbar_container_normal" id="navbar_normal">
+            <a href="index.html" class="navbar_item"> Inici </a>
+            <a href="afegir_lloc.html" class="navbar_item" id="afegir_lloc"> Afegir Lloc </a>
+        </nav>
+
+        <div class="detail_container">
+
+            <div id='places'> </div>
+
+            <div class="buttons_container">
+                <button type="button" class="boto" id="vesEnrere"> 
+                    <i class="material-icons md-16">chevron_left</i> Enrere 
+                </button>
+                <button type="button" class="boto" id="elimina"> 
+                    <i class="material-icons md-16">delete_outline</i> Eliminar 
+                </button>
+            </div>
+
+            <div class="detail_item_container"> 
+                <div id="mapa" class="detail_item_container mapa"> </div>
+            </div>
+
+
+
+            <!--div id="mapa" class="detail_item_container mapa"> </div-->
+
+            <script type="text/javascript" src="cordova.js"></script>
+            
+        </div>
+
+    </body>
+
+</html>

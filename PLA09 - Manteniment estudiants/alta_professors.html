@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+
+<head>
+
+  <meta charset="UTF-8" />
+  <script type="text/javascript" src="js/alta_professors.js"> </script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Alta professors </title>
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <meta name="author" content="Sergi Juanati"
+
+</head>
+
+<body>
+
+  <div class="global_menu_border">
+
+    <header>
+      <p class="global_menu_header"> PLA PQTM CIFO 2019 </p>
+    </header>
+
+    <hr class="no_top_margin">
+
+    <section class="flex_menu">
+
+      <article class="local_menu_border width300px">
+
+        <form>
+
+          <p class="local_menu_header"> Alta professors </p>
+
+          <!-- Input fields -->
+
+          <div class='flex_input padding_top_10px'>
+            <p class='inline_block width100px right'> Nom: </p>
+            <input type="text" id="nom" autofocus>
+          </div>
+
+          <div class="flex_input">
+            <p class="inline_block width100px right"> Usuari: </p>
+            <input type="text" id="usuari">
+          </div>
+
+          <div class="flex_input">
+            <p class="inline_block width100px right"> Email: </p>
+            <input type="email" id="email">
+          </div>
+
+          <div class="flex_input">
+            <p class="inline_block width100px right"> Password: </p>
+            <input type="password" id="password">
+          </div> <br>
+
+          <!-- Buttons -->
+
+          <div class="flex_input padding_bottom_20px">
+            <div>
+              <button id="alta" type="button" class="boto boto_ok width100px">
+              <i class="material-icons md-16">check</i> Alta </button>
+            </div>
+            <div>
+              <button id="enrere" type="button" class="boto boto_cancel width100px" onclick="history.back(-1)">
+              <i class="material-icons md-16">chevron_left</i> Enrere </button>
+            </div>
+          </div>
+
+        </form>
+
+      </article>
+
+    </section>
+
+  </div>
+
+</body>

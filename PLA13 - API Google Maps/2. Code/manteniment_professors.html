@@ -1,0 +1,137 @@
+<!DOCTYPE HTML>
+
+<head>
+
+  <meta charset="UTF-8" />
+  <script type="text/javascript" src="js/manteniment_professors.js"> </script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Manteniment formadors </title>
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <meta name="author" content="Sergi Juanati">
+
+</head>
+
+<!--body onload="obtenirProfessors()"-->
+<body>
+
+  <div class="global_menu_border">
+
+    <header> <p class="global_menu_header"> PLA PQTM CIFO 2019 </p> </header>
+
+    <hr class="no_top_margin">
+
+    <div class="flex_menu">
+
+      <div class="local_menu_border width800px">
+
+        <form id="formulari">
+
+        <p class="local_menu_header"> Manteniment professors </p>
+
+        <div class="flex_menu padding_top_10px padding_bottom_20px">
+
+          <!-- Llistat de professors -->
+
+          <section class="width300px">
+
+            <p class="center bold"> Professors </p>
+
+               <div style="height: 38vh; overflow: auto;">
+                 <table id="dadesProfes">
+                 </table>
+                 <br>
+               </div>
+
+               <div id="paginacio">
+               </div>
+
+
+
+          </section>
+
+          <!-- Dades personals-->
+
+          <section class="local_menu_border width300px">  <!--style="flex-grow:1;"-->
+
+              <p class="center bold"> Dades personals </p>
+
+                <div class="flex_input">
+                  <p class="inline_block width100px"> Nom: </p>
+                  <input type="text" id="nom">
+                </div>
+
+                <div class="flex_input">
+                  <p class="inline_block width100px"> Usuari: </p>
+                  <input type="text" id="usuari">
+                </div>
+
+                <div class="flex_input">
+                  <p class="inline_block width100px"> Email: </p>
+                  <input type="email" id="email">
+                </div>
+
+                <div class="flex_input">
+                  <p class="inline_block width100px"> Password: </p>
+                  <input type="password" id="password">
+                </div>
+
+                <br>
+
+                <div class="flex_input">
+                  <p> Tipus usuari: </p>
+                  <select id="tipus">
+                    <option value="TC"> Formador </option>
+                    <option value="AD"> Administrador </option>
+                  </select>
+                </div>
+
+                <div class="flex_input">
+                  <p> Escola: </p>
+                  <select id="escola">
+                    <option value="nil"> Cap escola </option>
+                  </select>
+                </div>
+
+              <br>
+
+            </section>
+
+        </div>
+
+        <!-- Botons -->
+
+        <footer class="flex_menu padding_bottom_20px">
+          <div>
+            <button id="alta" type="button" class="boto boto_ok width100px">
+            <i class="material-icons md-16">add</i> Nou </button>
+          </div>
+
+          <div>
+            <button id="modificar" type="button" class="boto boto_modificar width100px">
+            <i class="material-icons md-16">check</i> Modificar </button>
+          </div>
+
+          <div>
+            <button id="baixa" type="button" class="boto boto_eliminar width100px">
+            <i class="material-icons md-16">close</i> Baixa </button>
+          </div>
+
+          <div>
+            <button id="enrere" type="button" class="boto boto_cancel width100px" onclick="history.back(-1)">
+            <i class="material-icons md-16">chevron_left</i> Enrere </button>
+          </div>
+
+          <input type='hidden' id='idprofessor' >
+
+        </footer>
+
+      </form>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
